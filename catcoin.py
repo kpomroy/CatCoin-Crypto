@@ -20,7 +20,25 @@ def validateInput(options):
         print("Invalid input")
         return False
 
-
+def checkWalletBalance(wallets):
+    print('Select a wallet:')
+    print('1. Wallet 1')
+    print('2. Wallet 2')
+    print('3. Wallet 3')
+    walletValid = False
+    while not walletValid:
+        wallet = input()
+        if wallet == '1':
+            walletValid = True   
+            print('Wallet 1 balance: ' + wallets[0][1] + ' CAT')   
+        elif wallet == '2':
+            walletValid = True
+            print('Wallet 2 balance: ' + wallets[1][1] + ' CAT')  
+        elif wallet == '3':
+            walletValid = True
+            print('Wallet 3 balance: ' + wallets[2][1] + ' CAT')  
+        else: 
+            print('Invalid choice. Enter 1, 2, or 3.')
             
 def main():
     wallets = readWallets('wallets.csv')
@@ -41,6 +59,7 @@ def main():
         # check balance
         if choice == '1':
             menuValid = True
+            checkWalletBalance(wallets)
             # print('Select a wallet:')
             # print('1. Wallet 1')
             # print('2. Wallet 2')
