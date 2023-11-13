@@ -14,7 +14,7 @@ import csv
 import sys
 
 REWARD = 10
-DIFFICULTY = 3
+DIFFICULTY = 5
 DISPLAY = True
 MINER_WALLET_FILE = 'miner_wallet.csv'
 
